@@ -1,0 +1,50 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@openzeppelin/contracts": "4.5.0",
+    "colors": "^1.4.0",
+    "dotenv": "^14.2.0",
+    "hardhat": "^2.6.2"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.8",
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-etherscan": "^2.1.5",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "chai": "^4.3.4",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.4.5",
+    "hardhat-deploy": "^0.9.3"
+  },
+  "scripts": {
+    "test": "npx hardhat test",
+    "deploy_fantomtest": "npx hardhat run --network fantomtestnet scripts/deploy.js",
+    "deploy_fantomtest_token": "npx hardhat run --network fantomtestnet scripts/token.js",
+    "deploy_bsctest": "npx hardhat run --network bsctestnet scripts/deploy.js",
+    "deploy_ganache": "npx hardhat run --network ganache scripts/deploy.js",
+    "deploy_local": "npx hardhat run --network localhost scripts/deploy.js",
+    "deploy_moonbase": "npx hardhat run --network moonbase scripts/deploy.js",
+    "deploy_icicb_test": "npx hardhat run --network icicbtest scripts/deploy.js",
+    "deploy": "npx hardhat run --network bsc scripts/deploy_main.js"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
